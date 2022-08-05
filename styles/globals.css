@@ -15,12 +15,115 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+/* header */
+
+header{
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: aliceblue;
+
 }
+
+.title-header{
+  margin-left: 100px;
+}
+
+
+.item-nav{
+  display: inline ;
+  margin: 10px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  
+}
+.item-nav:hover{
+  background-color: rgb(182, 22, 22);
+}
+
+
+/* components button */
+
+
+
+.btn-nav{
+  background-color: rgba(99, 102, 99, 0.479);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  cursor: pointer;
+  margin-right: 20px;
+
+}
+.btn-nav:hover{
+  background-color: rgb(80, 83, 82);
+}
+
+
+
+.btn-cart{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.btn-cart:hover{
+  background-color: rgb(70, 77, 77);
+}
+
+
+
+
+
+
+
+/* content */
+main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+
+}
+.card{
+  width: 500px;
+  height: auto;
+  box-shadow: 10px 5px 5px rgb(43, 36, 36);
+  margin-top: 100px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.9);
+  text-align: center;
+  padding: 30px 30px 30px 30px;
+  background-color: black;
+  color: antiquewhite;
+
+
+
+  
+}
+.card:hover{
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.card-description{
+  text-align: justify;
+}
+
+
+
+
+
+
