@@ -2,6 +2,9 @@ import Button from './Button';
 import Image from 'next/image';
 // import Pokemon from './Pokemon';
 
+  
+
+
     
 
 const Card = ({ title, price, description , pokemon ,index }) => {
@@ -17,14 +20,14 @@ const Card = ({ title, price, description , pokemon ,index }) => {
 
     
   return (
-    <article className="card">
+    <article className="card">  
       <h1 className="card-title">{title}</h1>
       <p className="card-description">{description}</p>
       
-    <div>
+    <div className='img'>
      <Image
-       width={150}
-       height={150}
+       width={250}
+       height={250}
        src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokeIndex}.png`}
       ></Image>
     </div>

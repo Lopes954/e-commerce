@@ -53,11 +53,14 @@ export default function Home({ initialPokemon }) {
       <div>
           {pokemon.results.map((monster, index) => (
             <Card 
-            title="t shirt noir"
+            title="bulbizare" 
+            
+            
             price="12"
             description="le miroir de la chambre casser"
             key={index} pokemon={monster} index={index} />
           ))}
+          
         </div>
         
         
