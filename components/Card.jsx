@@ -21,6 +21,7 @@ const Card = ({ title, price, description, pokemon, index }) => {
           width="250"
           height="250"
           src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokeIndex}.png`}
+          alt=""
         />
       </div>
 
