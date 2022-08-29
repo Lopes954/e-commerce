@@ -1,7 +1,8 @@
 import Button from '../../components/Button';
+import Link from 'next/link';
+import PokemonInfo from './PokemonInfo';
 
 const Card = ({ name, id }) => {
-
   const addCheckout = () => {
     console.log('ajout panier');
   };
@@ -10,16 +11,15 @@ const Card = ({ name, id }) => {
     console.log('achat');
   };
 
-
-
-
-
-
-
-
   return (
     <article className="card">
-      <h1 className="card-title">{id} - {name.toUpperCase()}</h1>
+      <h1 className="card-title">
+        {id} - {name.toUpperCase()}
+      </h1>
+
+      {/* <Link>
+        <PokemonInfo id={id}/>
+      </Link> */}
 
       <Button
         label="ajouter au panier "

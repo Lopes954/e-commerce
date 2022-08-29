@@ -7,7 +7,7 @@ export default function Pokedex() {
 
   useEffect(() => {
     const getPokedex = async () => {
-      const data = await pokemonListApi.getpokemonList();
+      const data = await pokemonListApi.getPokemonList();
       setPokemonList(data.results);
     };
     getPokedex();
