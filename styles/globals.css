@@ -58,6 +58,10 @@ header{
 /* components button */
 
 
+.title-header{
+  cursor: pointer;
+}
+
 
 .btn-nav{
   background-color: rgba(99, 102, 99, 0.479);

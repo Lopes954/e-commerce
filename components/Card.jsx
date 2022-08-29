@@ -1,14 +1,8 @@
 import Button from './Button';
 import Image from 'next/image';
-// import Pokemon from './Pokemon';
 
-  
-
-
-    
-
-const Card = ({ title, price, description , pokemon ,index }) => {
-    const pokeIndex = ('000' + index + 1).slice(-3)
+const Card = ({ title, price, description, pokemon, index }) => {
+  const pokeIndex = ('000' + index + 1).slice(-3);
   const addCheckout = () => {
     console.log('ajout panier');
   };
@@ -17,21 +11,18 @@ const Card = ({ title, price, description , pokemon ,index }) => {
     console.log('achat');
   };
 
-
-    
   return (
-    <article className="card">  
+    <article className="card">
       <h1 className="card-title">{title}</h1>
       <p className="card-description">{description}</p>
-      
-    <div className='img'>
-     <Image
-       width={250}
-       height={250}
-       src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokeIndex}.png`}
-      ></Image>
-    </div>
-      
+
+      <div className="img">
+        <Image
+          width={250}
+          height={250}
+          src={`https://assets.pokemon.com/assets/cms2/img/pokedex/full/${pokeIndex}.png`}
+        ></Image>
+      </div>
 
       <h2 className="card-price">{price}</h2>
 
@@ -44,8 +35,5 @@ const Card = ({ title, price, description , pokemon ,index }) => {
     </article>
   );
 };
-
-
-
 
 export default Card;
