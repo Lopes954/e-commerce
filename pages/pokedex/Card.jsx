@@ -1,4 +1,4 @@
-import Button from './Button';
+import Button from '../../components/Button';
 
 const Card = ({ title, price, description, pokemon, index }) => {
   const pokeIndex = ('000' + index + 1).slice(-3);
