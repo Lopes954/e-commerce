@@ -1,25 +1,18 @@
-import customAxios from "./../customAxios";
+import axios from "axios";
 
-const route = "/api/articles/";
+const pokemonListApi = {
 
-const articlesApi = {
+  async getpokemonList() {
 
-  async getArticlesSortedByDate() {
-
-    let response = await customAxios.get(`${route}`)
+    let response = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=151")
       .then((data) => {
         return data;
       })
       .catch(error => {
-        console.error(`Route ${route} does not exist !`, error);
+        console.error(`Route does not exist !`, error);
       });
 
     if (response) {
-      // Step to sort Article by date
-      response.data.sort(function (a, b) {
-        // Have to use "new Date" to format "field date" in timestamp
-        return new Date(b.date) - new Date(a.date);
-      })
       return response.data;
     }
     return [];
@@ -27,4 +20,4 @@ const articlesApi = {
   }
 }
 
-export default articlesApi;
+export default pokemonListApi;

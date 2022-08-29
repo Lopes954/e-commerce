@@ -1,34 +1,31 @@
 import Card from './Card';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import pokemonListApi from '../../src/service/routes/pokemonListApi';
 
 export default function Pokedex() {
   const [pokemonList, setPokemonList] = useState([]);
 
-  //console.log(pokemonList);
+  useEffect(() => {
+    const getPokedex = async () => {
+      const data = await pokemonListApi.getpokemonList();
+      setPokemonList(data.results);
+    };
+    getPokedex();
+  }, []);
 
   return (
-    <div className='pokedex'>
-      {pokemonList.length > 1
-        ? pokemonList.map((pokemon, index) => (
-            <Card
-              title={pokemon.name}
-              price="12"
-              description="le miroir de la chambre casser"
-              key={index}
-              pokemon={pokemon}
-              index={index}
-            />
-          ))
-        : <div>empty pokedex</div>}
+    <div className="pokedex">
+      {pokemonList.length > 1 ? (
+        pokemonList.map((pokemon, index) => (
+          <Card
+            name={pokemon.name}
+            id={index+1}
+            key={index}
+          />
+        ))
+      ) : (
+        <div>empty pokedex</div>
+      )}
     </div>
   );
-}
-
-export async function test() {
-  const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=150');
-  if (response.results) {
-    const initialPokemon = await response.results.json();
-    setPokemonList(initialPokemon);
-  }
-  return null;
 }
