@@ -9,6 +9,9 @@ export default function Navbar() {
       <Link href="/">
         <a href="">HOME</a>
       </Link>
+      <Link href="/pokedex">
+        <a href="">Pokedex</a>
+      </Link>
       <Link href="/about">
         <a href="">A propos</a>
       </Link>
