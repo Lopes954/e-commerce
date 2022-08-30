@@ -9,7 +9,7 @@ export default function Pokedex() {
     const getPokedex = async () => {
       const data = await pokemonListApi.getPokemonList();
 
-      console.log(data);
+      // console.log(data);
 
       if (data !== []) {
         setPokemonList(data.results);

@@ -6,19 +6,22 @@ export default function Chuck() {
 
   useEffect(() => {
     const getCitation = async () => {
-      const data = await chuckApi.getRandomChuckCitation;
+      const data = await chuckApi.getRandomChuckCitation();
 
+    //  console.log(data.value);
       if (data !== []) {
         setChuckCitation(data.value);
       }
       
     };
     getCitation();
+    // console.log(chuckCitation);
+
   }, []);
 
   return (
-    <div className="pokedex">
-     {chuckCitation !== ''? chuckCitation : "test"}
+    <div className="citation">
+     {chuckCitation !== '' ? chuckCitation : "test"}
     </div>
   );
 }
