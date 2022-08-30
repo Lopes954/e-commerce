@@ -5,19 +5,19 @@ export default function Navbar() {
   const router = useRouter();
 
   return (
-    <nav>
-      <Link href="/">
-        <a href="">HOME</a>
+    <header>
+      <Link  href="/">
+        <a  className='item-nav' href="">HOME</a>
       </Link>
-      <Link href="/pokedex">
-        <a href="">Pokedex</a>
+      <Link  href="/pokedex">
+        <a className='item-nav' href="">Pokedex</a>
       </Link>
       <Link href="/about">
-        <a href="">A propos</a>
+        <a className='item-nav' href="">A propos</a>
       </Link>
-      <Link href="/contact">
-        <a href="">Contact</a>
+      <Link href="/chuck">
+        <a className='item-nav' href="">Chuck-Noris</a>
       </Link>
-    </nav>
+    </header>
   );
 }

@@ -8,7 +8,12 @@ export default function Pokedex() {
   useEffect(() => {
     const getPokedex = async () => {
       const data = await pokemonListApi.getPokemonList();
-      setPokemonList(data.results);
+
+      console.log(data);
+
+      if (data !== []) {
+        setPokemonList(data.results);
+      }
     };
     getPokedex();
   }, []);
@@ -16,12 +21,8 @@ export default function Pokedex() {
   return (
     <div className="pokedex">
       {pokemonList.length > 1 ? (
-        pokemonList.map((pokemon, index) => (
-          <Card
-            name={pokemon.name}
-            id={index+1}
-            key={index}
-          />
+        pokemonList.map((bestiole, iteration) => (
+          <Card name={bestiole.name} id={iteration + 1} key={iteration} />
         ))
       ) : (
         <div>empty pokedex</div>

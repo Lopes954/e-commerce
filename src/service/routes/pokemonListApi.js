@@ -11,6 +11,7 @@ const pokemonListApi = {
         console.error(`Route does not exist !`, error);
       });
 
+
     if (response) {
       return response.data;
     }
@@ -26,6 +27,7 @@ const pokemonListApi = {
       .catch((error) => {
         console.error(`Route does not exist !`, error);
       });
+
 
     if (response) {
       return response.data;
