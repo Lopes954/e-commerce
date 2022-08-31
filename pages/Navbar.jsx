@@ -5,7 +5,7 @@ export default function Navbar() {
   const router = useRouter();
 
   return (
-    <header>
+    <nav>
       <Link  href="/">
         <a  className='item-nav' href="">HOME</a>
       </Link>
@@ -18,6 +18,6 @@ export default function Navbar() {
       <Link href="/chuck">
         <a className='item-nav' href="">Chuck-Noris</a>
       </Link>
-    </header>
+    </nav>
   );
 }

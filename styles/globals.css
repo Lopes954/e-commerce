@@ -22,15 +22,14 @@ a {
 
 /* header */
 
-header{
+nav{
   width: 100%;
   background-color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
   color: aliceblue;
-  position: fixed;
-  z-index: 1;
+  /* position: fixed; */
   font-size: 20px;
   padding: 20px;
 
@@ -120,7 +119,7 @@ header{
   
 
 }
-.card{
+.card-pokedex{
   display: inline-block;
   margin: 100px 20px 20px 20px;
   width: 500px;
@@ -138,11 +137,11 @@ header{
 
 }
 
-.card:hover{
+.card-pokedex:hover{
   cursor: pointer;
   /* background-color: rgb(163, 163, 157); */
   color: rgb(255, 255, 255);
-  transform: rotate(1turn);
+  /* transform: rotate(1turn); */
   transition-duration: 1.5s;
   background-image: url(../public/asset/Pokeball.png);
   background-size: 500px;
@@ -157,7 +156,37 @@ header{
 }
 .citation{
   color: white;
+  background-color: aqua;
+  border: 2px solid red;
 }
+
+.card-chuck{
+  display: inline-block;
+  margin: 100px 20px 20px 20px;
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.9);
+  text-align: center;
+  padding: 30px 30px 30px 30px;
+  background-color: rgb(117, 54, 54);
+  font-weight: 900;
+
+
+}
+.card-chuck:hover{
+  cursor: pointer;
+  /* background-color: rgb(163, 163, 157); */
+  color: rgb(255, 255, 255);
+  /* transform: rotate(1turn); */
+  transition-duration: 1.5s;
+  /* background-image: url(../public/asset/Pokeball.png); */
+  background: rgb(128, 104, 104);
+  background-size: 500px;
+
+}
+
+
 
 
 

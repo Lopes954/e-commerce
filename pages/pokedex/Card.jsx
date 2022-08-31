@@ -1,10 +1,10 @@
 import Button from '../../components/Button';
-import Link from 'next/link';
-import PokemonInfo from './PokemonInfo';
+
 
 const Card = ({ name, id }) => {
   const addCheckout = () => {
     console.log('ajout panier');
+    console.log(name);
   };
 
   const buy = () => {
@@ -12,10 +12,12 @@ const Card = ({ name, id }) => {
   };
 
   return (
-    <article className="card">
+    <article className="card-pokedex">
       <h1 className="card-title">
-        {id} - {name.toUpperCase()}
+        {id} - {name}
+        
       </h1>
+     
 
       {/* <Link>
         <PokemonInfo id={id}/>
