@@ -1,17 +1,17 @@
-import { useState, useEffect } from 'react';
-import chuckApi from '../../src/service/routes/chuckApi';
 import CardChuck from './CardChuck';
 
 export default function Chuck() {
+  // for (let i = 0; i <= 25; i++) {
+  //   console.log('michel'+i);
+  // }
 
-  
+  const numbers = [1, 2, 3, 4, 5, 6];
 
   return (
-    <>
-    
-      <CardChuck classMichel="card-chuck"/>
-     
-    </>
-    
+    <div>
+      {numbers.map((number, iteration) => (
+        <CardChuck key={iteration} classMichel="card-chuck" />
+      ))}
+    </div>
   );
 }
