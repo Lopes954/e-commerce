@@ -5,18 +5,19 @@ export default function Navbar() {
   const router = useRouter();
 
   return (
-    <nav>
+    <nav >
       <Link  href="/">
-        <a  className='item-nav' href="">HOME</a>
+        <a className={router.pathname == "/" ? "is-active"  : "not-active"} >
+          HOME</a>
       </Link>
       <Link  href="/pokedex">
-        <a className='item-nav' href="">Pokedex</a>
+        <a className={router.pathname == "/pokedex" ? "is-active"  : "not-active"} >Pokedex</a>
       </Link>
       <Link href="/about">
-        <a className='item-nav' href="">A propos</a>
+        <a className={router.pathname == "/about" ? "is-active"  : "not-active"} >A propos</a>
       </Link>
       <Link href="/chuck">
-        <a className='item-nav' href="">Chuck-Noris</a>
+        <a className={router.pathname == "/chuck" ? "is-active"  : "not-active"} >Chuck-Noris</a>
       </Link>
     </nav>
   );
