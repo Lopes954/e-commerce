@@ -22,6 +22,11 @@ export default function Navbar() {
         <a className={`navbar-item ${router.pathname == "/chuck" ? "is-active"  : ""}`}
         >Chuck-Noris</a>
       </Link>
+      <Link href="/">
+        <a className={`navbar-item ${router.pathname == "/" ? "is-active"  : ""}`}
+        >toupis</a>
+      </Link>
+      
     </nav>
   );
 }
